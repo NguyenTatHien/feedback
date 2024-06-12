@@ -11,8 +11,8 @@
       }
     ],
     "require": {
-      "php": ">=7.2",
-      "wintercms/winter": "^1.1"
+      "php": ">=8.2",
+      "wintercms/winter": "^1.2"
     },
     "extra": {
       "winter": {
