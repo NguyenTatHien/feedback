@@ -1,0 +1,23 @@
+{
+    "name": "nguyenhien/feedback",
+    "type": "winter-plugin",
+    "description": "feedbackform",
+    "keywords": ["wintercms", "plugin"],
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Nguyen Hien",
+        "email": "tathien2003@gmail.com"
+      }
+    ],
+    "require": {
+      "php": ">=7.2",
+      "wintercms/winter": "^1.1"
+    },
+    "extra": {
+      "winter": {
+        "plugin": "nguyenhien.feedback"
+      }
+    }
+  }
+  

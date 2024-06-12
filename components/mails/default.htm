@@ -1,0 +1,43 @@
+<form
+    id="feedbackForm"
+    data-request="onSendMailFromCustomer"
+    data-request-before-update="return validateForm"
+    data-request-flash
+>
+    <div class="form-group">
+        <label for="name">{{ 'nguyenhien.feedback::lang.form.name' | trans}}: <span style="color: red;">*</span></label>
+        <input type="text" class="form-control" placeholder="{{ 'nguyenhien.feedback::lang.form.name' | trans }}" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">{{ 'nguyenhien.feedback::lang.form.email' | trans }}: <span style="color: red;">*</span></label>
+        <input type="email" class="form-control" placeholder="{{ 'nguyenhien.feedback::lang.form.email' | trans }}" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="title">{{ 'nguyenhien.feedback::lang.form.title' | trans}}: <span style="color: red;">*</span></label>
+        <input type="text" class="form-control" placeholder="{{ 'nguyenhien.feedback::lang.form.title' | trans}}" id="title" name="title" required>
+    </div>
+    <div class="form-group">
+        <label for="content">{{ 'nguyenhien.feedback::lang.form.content' | trans}}: <span style="color: red;">*</span></label>
+        <textarea class="form-control" placeholder="{{ 'nguyenhien.feedback::lang.form.content' | trans}}" email="content" name="content" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" data-attach-loading>{{ 'nguyenhien.feedback::lang.form.submit' | trans}}</button>
+</form>
+
+<script>
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (validateForm()) {
+        this.setAttribute('data-request', 'onSendMailFromCustomer');
+        oc.request(this, this.getAttribute('data-request'));
+    }
+    });
+    function validateForm(event) {
+        var form = document.getElementById('feedbackForm');
+        if (form.checkValidity()) {
+            return true;
+        } else {
+            form.reportValidity();
+            return false;
+        }
+    }
+</script>

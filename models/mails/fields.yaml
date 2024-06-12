@@ -1,0 +1,8 @@
+fields:
+  language_switcher:
+    label: Language
+    type: dropdown
+    options:
+      en: English
+      fr: French
+    default: en
