@@ -17,6 +17,9 @@
     "extra": {
       "winter": {
         "plugin": "nguyenhien.feedback"
+      },
+      "branch-alias": {
+        "dev-main": "1.0-dev"
       }
     }
   }
