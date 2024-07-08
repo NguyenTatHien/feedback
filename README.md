@@ -7,7 +7,7 @@ This plugin allows customers to sending information for feedback and this plugin
 Use composer to install the plugin:
 
 ```bash
-composer install nguyenhien/feedback
+composer require nguyenhien/feedback
 ```
 
 ## Feedback Component
